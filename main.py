@@ -25,7 +25,7 @@ class Contacts(BaseModel):
     addr_line1 = CharField()
     addr_line2 = CharField()
     zipcode = IntegerField()
-    username = ForeignKeyField(Users, backref='contacts')
+    username = CharField()
 
 db.connect()
 
@@ -34,8 +34,8 @@ db.create_tables([Users, Contacts])
 #user = Users(first_name='Hema1', last_name='Omprakash1', username='hemao1' )
 #user.save()
 #Users.create(first_name='Hema1', last_name='Omprakash1', username='hemao1')
-selected_row = Users.get(Users.first_name == 'Hema1')
-print(selected_row.last_name)
+#selected_row = Users.get(Users.first_name == 'Hema1')
+#print(selected_row.last_name)
 
 # class ContactBook:
 #     def __init__(self, first_name, last_name, username, type):

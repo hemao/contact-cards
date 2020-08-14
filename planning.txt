@@ -1,0 +1,44 @@
+create models for users and contacts
+
+users :
+    first_name 
+    last_name
+    username(unique)
+
+contacts:
+    first_name
+    last_name
+    phone
+    addr_line1
+    addr_line2
+    zipcode
+    username(foreign key)
+
+* one user can have multiple contacts
+
+Interface -
+
+When the program is first run ask the user the following -
+new(1) or existing user(2)?
+
+If new - get the user details based on users model
+    if existing user - get the username and check users table 
+        if the user exists - ask if the user needs to add new contact or lookup existing contacts
+                        - if adding - get details based on contacts model
+                        - if lookup - get the search key from user
+
+   if the user does not exist - print invalid user name and try again
+
+
+create user class
+methods 
+add_user(username)
+
+create contact class
+method
+add_contact(username)
+
+
+
+
+

@@ -20,9 +20,11 @@ class Users(BaseModel):
 class Contacts(BaseModel):
     first_name = CharField()
     last_name = CharField()
+    email = CharField()
     phone = CharField()
-    addr_line1 = CharField()
-    addr_line2 = CharField()
+    address = CharField()
+    city = CharField()
+    state = CharField()
     zipcode = IntegerField()
     username = CharField()
 
